@@ -1,6 +1,7 @@
 package io.github.hverrill.manaflux.registry;
 
 import io.github.hverrill.manaflux.Manaflux;
+import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.ItemStack;
@@ -12,14 +13,18 @@ import java.util.Locale;
 
 public class ManasteelIngotsUtils {
     public enum ManasteelIngots implements ItemConvertible {
-        ANCIENT_MANASTEEL_INGOT(Rarity.RARE), MANASTEEL_INGOT(Rarity.UNCOMMON);
+        ANCIENT_MANASTEEL_INGOT(Rarity.RARE, true), MANASTEEL_INGOT(Rarity.UNCOMMON, false);
 
         public final String name;
         public final Item item;
 
-        ManasteelIngots(Rarity itemRarity){
+        ManasteelIngots(Rarity itemRarity, boolean fireproof){
             name = this.toString().toLowerCase(Locale.ROOT);
-            item = new Item(new Item.Settings().rarity(itemRarity).group(Manaflux.ITEMGROUP));
+            FabricItemSettings itemSettings = new FabricItemSettings().rarity(itemRarity).group(Manaflux.ITEMGROUP);
+            if (fireproof) {
+                itemSettings = itemSettings.fireproof();
+            }
+            item = new Item(itemSettings);
         }
 
         public ItemStack getStack() {
