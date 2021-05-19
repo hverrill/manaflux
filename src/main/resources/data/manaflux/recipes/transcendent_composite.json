@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+      {
+          "item": "manaflux:reactive_composite"
+      },
+      {
+          "item": "manaflux:reactive_composite"
+      },
+      {
+          "item": "minecraft:dragon_breath"
+      }
+  ],
+  "result": {
+      "item": "manaflux:transcendent_composite",
+      "count": 2
+  }
+}

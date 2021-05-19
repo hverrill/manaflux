@@ -15,7 +15,7 @@ public class CompositeUtils {
     public enum Composites implements ItemConvertible {
         MANAFLUX_COMPOSITE(Rarity.COMMON), 
         REACTIVE_COMPOSITE(Rarity.UNCOMMON),
-        TRANSCENDENT_COMPOSITE(Rarity.UNCOMMON);
+        TRANSCENDENT_COMPOSITE(Rarity.RARE);
 
         public final String name;
         public final Item item;
