@@ -4,6 +4,9 @@
   "item.manaflux.manaflux_composite": "Manaflux Composite",
   "item.manaflux.reactive_composite": "Reactive Composite",
   "item.manaflux.transcendent_composite": "Transcendent Composite",
+  "item.manaflux.manaflux_circuit": "Manaflux Circuit",
+  "item.manaflux.conductive_circuit": "Conductive Circuit",
+  "item.manaflux.high_bandwidth_circuit": "High-bandwidth Circuit",
   "itemGroup.manaflux.general": "Manaflux"
 
 }

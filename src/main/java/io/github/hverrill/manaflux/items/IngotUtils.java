@@ -11,15 +11,16 @@ import net.minecraft.util.registry.Registry;
 
 import java.util.Locale;
 
-public class ManasteelIngotsUtils {
-    public enum ManasteelIngots implements ItemConvertible {
-        ANCIENT_MANASTEEL_INGOT(Rarity.RARE, true), MANASTEEL_INGOT(Rarity.UNCOMMON, false);
+public class IngotUtils {
+    public enum Ingots implements ItemConvertible {
+        ANCIENT_MANASTEEL_INGOT(Rarity.RARE, true), 
+        MANASTEEL_INGOT(Rarity.UNCOMMON, false);
 
-        public final String name;
+        public final String id;
         public final Item item;
 
-        ManasteelIngots(Rarity itemRarity, boolean fireproof){
-            name = this.toString().toLowerCase(Locale.ROOT);
+        Ingots(Rarity itemRarity, boolean fireproof){
+            id = this.toString().toLowerCase(Locale.ROOT);
             FabricItemSettings itemSettings = new FabricItemSettings().rarity(itemRarity).group(Manaflux.ITEMGROUP);
             if (fireproof) {
                 itemSettings = itemSettings.fireproof();
@@ -46,10 +47,10 @@ public class ManasteelIngotsUtils {
     }
 
     public static void init () {
-        for (ManasteelIngots ingot : ManasteelIngots.values()){
-            System.out.println(ingot.name);
+        for (Ingots ingot : Ingots.values()){
+            System.out.println(ingot.id);
             Registry.register(Registry.ITEM,
-                    new Identifier(Manaflux.MOD_ID, ingot.name),
+                    new Identifier(Manaflux.MOD_ID, ingot.id),
                     ingot.asItem()
             );
         }

@@ -11,16 +11,16 @@ import net.minecraft.util.registry.Registry;
 
 import java.util.Locale;
 
-public class CompositeUtils {
-    public enum Composites implements ItemConvertible {
-        MANAFLUX_COMPOSITE(Rarity.COMMON), 
-        REACTIVE_COMPOSITE(Rarity.UNCOMMON),
-        TRANSCENDENT_COMPOSITE(Rarity.RARE);
+public class CircuitUtils {
+    public enum Circuits implements ItemConvertible {
+        MANAFLUX_CIRCUIT(Rarity.COMMON), 
+        CONDUCTIVE_CIRCUIT(Rarity.UNCOMMON),
+        HIGH_BANDWIDTH_CIRCUIT(Rarity.RARE);
 
         public final String id;
         public final Item item;
 
-        Composites(Rarity itemRarity){
+        Circuits(Rarity itemRarity){
             id = this.toString().toLowerCase(Locale.ROOT);
             FabricItemSettings itemSettings = new FabricItemSettings().rarity(itemRarity).group(Manaflux.ITEMGROUP);
             item = new Item(itemSettings);
@@ -44,12 +44,12 @@ public class CompositeUtils {
         }
     }
 
-    public static void init () {
-        for (Composites ingot : Composites.values()){
-            System.out.println(ingot.id);
+    public static void init() {
+        for (Circuits circuit : Circuits.values()){
+            System.out.println(circuit.id);
             Registry.register(Registry.ITEM,
-                    new Identifier(Manaflux.MOD_ID, ingot.id),
-                    ingot.asItem()
+                    new Identifier(Manaflux.MOD_ID, circuit.id),
+                    circuit.asItem()
             );
         }
     }

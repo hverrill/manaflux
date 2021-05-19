@@ -1,16 +1,16 @@
 package io.github.hverrill.manaflux.registry;
 
+import io.github.hverrill.manaflux.items.CircuitUtils;
 import io.github.hverrill.manaflux.items.CompositeUtils;
-import io.github.hverrill.manaflux.items.ManasteelIngotsUtils;
+import io.github.hverrill.manaflux.items.IngotUtils;
 
 public class ModItems {
     // Create Item Varibles
 
 
     public static void registerItems(){
-        // Call register line
-        ManasteelIngotsUtils.init();
-        // IngotItems.register();
+        IngotUtils.init();
         CompositeUtils.init();
+        CircuitUtils.init();
     }
 }
