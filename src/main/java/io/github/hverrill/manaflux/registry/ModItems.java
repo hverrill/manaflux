@@ -1,5 +1,8 @@
 package io.github.hverrill.manaflux.registry;
 
+import io.github.hverrill.manaflux.items.CompositeUtils;
+import io.github.hverrill.manaflux.items.ManasteelIngotsUtils;
+
 public class ModItems {
     // Create Item Varibles
 

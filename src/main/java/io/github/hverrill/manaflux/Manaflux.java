@@ -1,6 +1,6 @@
 package io.github.hverrill.manaflux;
 
-import io.github.hverrill.manaflux.registry.ManasteelIngotsUtils.ManasteelIngots;
+import io.github.hverrill.manaflux.items.ManasteelIngotsUtils.ManasteelIngots;
 import io.github.hverrill.manaflux.registry.ModItems;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;

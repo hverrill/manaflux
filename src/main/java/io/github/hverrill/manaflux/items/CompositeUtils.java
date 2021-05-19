@@ -1,4 +1,4 @@
-package io.github.hverrill.manaflux.registry;
+package io.github.hverrill.manaflux.items;
 
 import io.github.hverrill.manaflux.Manaflux;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
