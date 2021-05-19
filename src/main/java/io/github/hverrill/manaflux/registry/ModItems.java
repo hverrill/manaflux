@@ -7,5 +7,7 @@ public class ModItems {
     public static void registerItems(){
         // Call register line
         ManasteelIngotsUtils.init();
+        // IngotItems.register();
+        CompositeUtils.init();
     }
 }

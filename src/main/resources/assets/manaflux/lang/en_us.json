@@ -1,4 +1,8 @@
 {
   "item.manaflux.manasteel_ingot": "Manasteel Ingot",
-  "item.manaflux.ancient_manasteel_ingot": "Ancient Manasteel Ingot"
+  "item.manaflux.ancient_manasteel_ingot": "Ancient Manasteel Ingot",
+  "item.manaflux.manaflux_composite": "Manaflux Composite",
+  "item.manaflux.reactive_composite": "Reactive Composite",
+  "item.manaflux.transcendent_composite": "Transcendent Composite"
+
 }
