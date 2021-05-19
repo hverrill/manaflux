@@ -3,14 +3,15 @@
   "id": "modid",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Manaflux",
+  "description": "Filler Text",
   "authors": [
-    "Me!"
+    "Salthin",
+    "FourInchKnife"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "",
+    "sources": "https://github.com/hverrill/manaflux"
   },
 
   "license": "CC0-1.0",
@@ -19,12 +20,10 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "com.salthin.manaflux.Manaflux"
     ]
   },
-  "mixins": [
-    "modid.mixins.json"
-  ],
+ 
 
   "depends": {
     "fabricloader": ">=0.7.4",
