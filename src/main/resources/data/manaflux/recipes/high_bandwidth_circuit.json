@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "WW",
+    "XR"
+  ],
+  "key": {
+    "W": {
+      "item": "manaflux:conductive_circuit"
+    },
+    "X": {
+      "item": "manaflux:transcendent_composite"
+    },
+    "R": {
+      "item": "minecraft:ancient_manasteel_ingot"
+    }
+  },
+  "result": {
+    "item": "manaflux:high_bandwidth_circuit",
+    "count": 1
+  }
+}

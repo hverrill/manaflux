@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "WW",
+    "XR"
+  ],
+  "key": {
+    "W": {
+      "item": "manaflux:manaflux_circuit"
+    },
+    "X": {
+      "item": "manaflux:reactive_composite"
+    },
+    "R": {
+      "item": "manaflux:manasteel_ingot"
+    }
+  },
+  "result": {
+    "item": "manaflux:conductive_circuit",
+    "count": 1
+  }
+}

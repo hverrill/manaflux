@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "WW",
+    "XR"
+  ],
+  "key": {
+    "W": {
+      "item": "minecraft:repeater"
+    },
+    "X": {
+      "item": "manaflux:manaflux_composite"
+    },
+    "R": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  "result": {
+    "item": "manaflux:manaflux_circuit",
+    "count": 1
+  }
+}
