@@ -1,4 +1,4 @@
-package com.salthin.manaflux;
+package io.github.hverrill.manaflux;
 
 import net.fabricmc.api.ModInitializer;
 

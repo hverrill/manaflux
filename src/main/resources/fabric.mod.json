@@ -1,29 +1,31 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "manaflux",
   "version": "${version}",
 
   "name": "Manaflux",
-  "description": "Filler Text",
+  "description": "This is an example description! Tell everyone what your mod is about!",
   "authors": [
     "Salthin",
     "FourInchKnife"
   ],
   "contact": {
-    "homepage": "",
+    "homepage": "https://hverrill.github.io/manaflux",
     "sources": "https://github.com/hverrill/manaflux"
   },
 
-  "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "license": "GPL-3.0-only",
+  "icon": "assets/manaflux/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.salthin.manaflux.Manaflux"
+      "io.github.hverrill.manaflux.Manaflux"
     ]
   },
- 
+  "mixins": [
+    "manaflux.mixins.json"
+  ],
 
   "depends": {
     "fabricloader": ">=0.7.4",
