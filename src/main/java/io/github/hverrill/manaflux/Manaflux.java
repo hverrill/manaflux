@@ -5,8 +5,8 @@ import net.fabricmc.api.ModInitializer;
 import net.minecraft.item.ItemGroup;
 
 public class Manaflux implements ModInitializer {
-	public static final ItemGroup MANAFLUX_GROUP = ItemGroup.MISC;
-	public static final String NAMESPACE = "manaflux";
+	public static final ItemGroup ITEMGROUP = ItemGroup.MISC;
+	public static final String MOD_ID = "manaflux";
 
 	@Override
 	public void onInitialize() {

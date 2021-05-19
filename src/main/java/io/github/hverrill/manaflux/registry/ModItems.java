@@ -6,6 +6,6 @@ public class ModItems {
 
     public static void registerItems(){
         // Call register line
-        ManafluxIngots.register();
+        ManasteelIngotsUtils.init();
     }
 }
