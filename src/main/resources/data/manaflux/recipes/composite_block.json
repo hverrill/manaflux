@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+        "item": "manaflux:manaflux_composite"
+    },
+    {
+        "item": "manaflux:manaflux_composite"
+    },
+    {
+        "item": "manaflux:manaflux_composite"
+    },
+    {
+        "item": "manaflux:manaflux_composite"
+    },
+    {
+        "item": "manaflux:manaflux_composite"
+    },
+    {
+        "item": "manaflux:manaflux_composite"
+    },
+    {
+        "item": "manaflux:manaflux_composite"
+    },
+    {
+        "item": "manaflux:manaflux_composite"
+    },
+    {
+        "item": "manaflux:manaflux_composite"
+    }      
+  ],
+  "result": {
+      "item": "manaflux:composite_block",
+      "count": 1
+  }
+}

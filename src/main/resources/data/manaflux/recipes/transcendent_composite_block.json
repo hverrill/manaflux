@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+        "item": "manaflux:transcendent_composite"
+    },
+    {
+        "item": "manaflux:transcendent_composite"
+    },
+    {
+        "item": "manaflux:transcendent_composite"
+    },
+    {
+        "item": "manaflux:transcendent_composite"
+    },
+    {
+        "item": "manaflux:transcendent_composite"
+    },
+    {
+        "item": "manaflux:transcendent_composite"
+    },
+    {
+        "item": "manaflux:transcendent_composite"
+    },
+    {
+        "item": "manaflux:transcendent_composite"
+    },
+    {
+        "item": "manaflux:transcendent_composite"
+    }      
+  ],
+  "result": {
+      "item": "manaflux:transcendent_composite_block",
+      "count": 1
+  }
+}

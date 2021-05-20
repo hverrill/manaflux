@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+      {
+          "item": "manaflux:reactive_composite_block"
+      }
+  ],
+  "result": {
+      "item": "manaflux:reactive_composite",
+      "count": 9
+  }
+}

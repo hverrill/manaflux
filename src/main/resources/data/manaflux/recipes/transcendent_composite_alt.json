@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+      {
+          "item": "manaflux:transcendent_composite_block"
+      }
+  ],
+  "result": {
+      "item": "manaflux:transcendent_composite",
+      "count": 9
+  }
+}
