@@ -20,7 +20,7 @@ import net.minecraft.world.World;
 import java.util.Random;
 
 public class SequenceWorkbench {
-    public static final String name = "sequence_workbench";
+    public static final String id = "sequence_workbench";
     public static Block SEQUENCE_WORKBENCH = new SequenceWorkbenchBlock(FabricBlockSettings
             /* Block Settings: */
             .of(Material.WOOD)
@@ -33,12 +33,12 @@ public class SequenceWorkbench {
     public static void init () {
         Registry.register(
                 Registry.BLOCK,
-                new Identifier(Manaflux.MOD_ID, name),
+                new Identifier(Manaflux.MOD_ID, id),
                 SEQUENCE_WORKBENCH
         );
         Registry.register(
                 Registry.ITEM,
-                new Identifier(Manaflux.MOD_ID, name),
+                new Identifier(Manaflux.MOD_ID, id),
                 new BlockItem(SEQUENCE_WORKBENCH,
                         new FabricItemSettings().group(Manaflux.ITEMGROUP))
         );

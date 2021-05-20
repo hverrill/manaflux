@@ -1,3 +1,5 @@
 {
-  "parent": "manaflux:block/sequence_workbench"
+  "variants": {
+    "": { "model": "manaflux:block/sequence_workbench" }
+  }
 }
