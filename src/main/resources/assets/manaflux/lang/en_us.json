@@ -7,6 +7,7 @@
   "item.manaflux.manaflux_circuit": "Manaflux Circuit",
   "item.manaflux.conductive_circuit": "Conductive Circuit",
   "item.manaflux.high_bandwidth_circuit": "High-bandwidth Circuit",
+  "block.manaflux.sequence_workbench": "Sequence Workbench",
   "itemGroup.manaflux.general": "Manaflux"
 
 }
