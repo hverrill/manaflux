@@ -5,9 +5,6 @@ import io.github.hverrill.manaflux.items.CompositeUtils;
 import io.github.hverrill.manaflux.items.IngotUtils;
 
 public class ModItems {
-    // Create Item Varibles
-
-
     public static void registerItems(){
         IngotUtils.init();
         CompositeUtils.init();
