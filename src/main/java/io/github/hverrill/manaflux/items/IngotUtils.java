@@ -4,7 +4,6 @@ import io.github.hverrill.manaflux.Manaflux;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemConvertible;
-import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
 import net.minecraft.util.registry.Registry;
@@ -26,18 +25,6 @@ public class IngotUtils {
                 itemSettings = itemSettings.fireproof();
             }
             item = new Item(itemSettings);
-        }
-
-        public ItemStack getStack() {
-            return new ItemStack(item);
-        }
-
-        public ItemStack getStack(int amount) {
-            return new ItemStack(item, amount);
-        }
-
-        public boolean hasGlint(ItemStack stack){
-            return true;
         }
 
         @Override
