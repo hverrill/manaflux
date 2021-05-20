@@ -8,6 +8,9 @@
   "item.manaflux.conductive_circuit": "Conductive Circuit",
   "item.manaflux.high_bandwidth_circuit": "High-bandwidth Circuit",
   "block.manaflux.sequence_workbench": "Sequence Workbench",
+  "block.manaflux.composite_block": "Block of Composite",
+  "block.manaflux.reactive_composite_block": "Block of Reactive Composite",
+  "block.manaflux.transcendent_composite_block": "Block of Transcendent Composite",
   "itemGroup.manaflux.general": "Manaflux"
 
 }

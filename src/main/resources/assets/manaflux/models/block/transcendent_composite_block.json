@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "manaflux:blocks/transcendent_composite_block"
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "manaflux:block/reactive_composite_block" }
+  }
+}
