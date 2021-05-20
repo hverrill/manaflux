@@ -1,6 +1,7 @@
 package io.github.hverrill.manaflux;
 
 import io.github.hverrill.manaflux.items.IngotUtils.Ingots;
+import io.github.hverrill.manaflux.registry.ModBlocks;
 import io.github.hverrill.manaflux.registry.ModItems;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
@@ -17,6 +18,7 @@ public class Manaflux implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		ModItems.registerItems();
+		ModBlocks.registerBlocks();
 		// This code runs as soon as Minecraft is in a mod-load-ready state.
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
