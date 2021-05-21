@@ -26,7 +26,6 @@ public class AlloyForge {
             .of(Material.METAL)
             .strength(1.0f, 1.0f)
             .sounds(BlockSoundGroup.NETHERITE)
-            .nonOpaque()
     );
 
     public static void init () {
