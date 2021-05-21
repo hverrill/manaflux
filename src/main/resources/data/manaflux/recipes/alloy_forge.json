@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "HCH",
+    "OFO",
+    "POP"
+  ],
+  "key": {
+    "O": {
+      "item": "minecraft:obsidian"
+    },
+    "H": {
+      "item": "minecraft:hopper"
+    },
+    "F": {
+      "item": "minecraft:blast_furnace"
+    },
+    "C": {
+      "item": "manaflux:manaflux_circuit"
+    },
+    "P": {
+      "item": "manaflux:plating"
+    }
+  },
+  "result": {
+    "item": "manaflux:alloy_forge",
+    "count": 1
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "__comment": "Model generated using MrCrayfish's Model Creator (https://mrcrayfish.com/tools?id=mc)",
+  "textures": {
+      "alloy_forge_front": "manaflux:blocks/alloy_forge_front",
+      "plating": "manaflux:blocks/plating",
+      "alloy_forge_side": "manaflux:blocks/alloy_forge_side",
+      "alloy_forge_top": "manaflux:blocks/alloy_forge_top"
+  },
+  "display": {
+      "gui": {
+          "rotation": [ 30, 45, 0 ],
+          "translation": [ 0, 0, 0 ],
+          "scale": [ 0.625, 0.625, 0.625 ]
+      },
+      "ground": {
+          "rotation": [ 0, 0, 0 ],
+          "translation": [ 0, 3, 0 ],
+          "scale": [ 0.25, 0.25, 0.25 ]
+      },
+      "fixed": {
+          "rotation": [ 0, 180, 0 ],
+          "translation": [ 0, 0, 0 ],
+          "scale": [ 1, 1, 1 ]
+      },
+      "head": {
+          "rotation": [ 0, 180, 0 ],
+          "translation": [ 0, 0, 0 ],
+          "scale": [ 1, 1, 1 ]
+      },
+      "firstperson_righthand": {
+          "rotation": [ 0, 315, 0 ],
+          "translation": [ 0, 2.5, 0 ],
+          "scale": [ 0.4, 0.4, 0.4 ]
+      },
+      "thirdperson_righthand": {
+          "rotation": [ 75, 315, 0 ],
+          "translation": [ 0, 2.5, 0 ],
+          "scale": [ 0.375, 0.375, 0.375 ]
+      }
+  },
+  "elements": [
+      {
+          "from": [ 0, 0, 0 ], 
+          "to": [ 16, 16, 16 ], 
+          "faces": {
+              "north": { "texture": "#alloy_forge_side", "uv": [ 0, 0, 16, 16 ] },
+              "east": { "texture": "#alloy_forge_side", "uv": [ 0, 0, 16, 16 ] },
+              "south": { "texture": "#alloy_forge_front", "uv": [ 0, 0, 16, 16 ] },
+              "west": { "texture": "#alloy_forge_side", "uv": [ 0, 0, 16, 16 ] },
+              "up": { "texture": "#alloy_forge_top", "uv": [ 0, 0, 16, 16 ] },
+              "down": { "texture": "#plating", "uv": [ 0, 0, 16, 16 ] }
+          }
+      },
+      {
+          "from": [ 3, 2, 16 ], 
+          "to": [ 13, 4, 17 ], 
+          "faces": {
+              "east": { "texture": "#alloy_forge_front", "uv": [ 12, 12, 13, 14 ] },
+              "south": { "texture": "#alloy_forge_front", "uv": [ 3, 12, 13, 14 ] },
+              "west": { "texture": "#alloy_forge_front", "uv": [ 3, 12, 4, 14 ] },
+              "up": { "texture": "#alloy_forge_front", "uv": [ 3, 12, 13, 13 ] },
+              "down": { "texture": "#alloy_forge_front", "uv": [ 3, 13, 13, 14 ] }
+          }
+      },
+      {
+          "from": [ 3, 10, 16 ], 
+          "to": [ 13, 12, 17 ], 
+          "faces": {
+              "east": { "texture": "#alloy_forge_front", "uv": [ 12, 4, 13, 6 ] },
+              "south": { "texture": "#alloy_forge_front", "uv": [ 3, 4, 13, 6 ] },
+              "west": { "texture": "#alloy_forge_front", "uv": [ 3, 4, 4, 6 ] },
+              "up": { "texture": "#alloy_forge_front", "uv": [ 3, 4, 13, 5 ] },
+              "down": { "texture": "#alloy_forge_front", "uv": [ 3, 5, 13, 6 ] }
+          }
+      },
+      {
+          "from": [ 3, 4, 16 ], 
+          "to": [ 5, 10, 17 ], 
+          "faces": {
+              "east": { "texture": "#alloy_forge_front", "uv": [ 4, 6, 5, 12 ] },
+              "south": { "texture": "#alloy_forge_front", "uv": [ 3, 6, 5, 12 ] },
+              "west": { "texture": "#alloy_forge_front", "uv": [ 3, 6, 4, 12 ] }
+          }
+      },
+      {
+          "from": [ 11, 4, 16 ], 
+          "to": [ 13, 10, 17 ], 
+          "faces": {
+              "east": { "texture": "#alloy_forge_front", "uv": [ 12, 6, 13, 12 ] },
+              "south": { "texture": "#alloy_forge_front", "uv": [ 11, 6, 13, 12 ] },
+              "west": { "texture": "#alloy_forge_front", "uv": [ 11, 6, 12, 12 ] }
+          }
+      },
+      {
+          "from": [ 9, 4, 16 ], 
+          "to": [ 10, 10, 17 ], 
+          "faces": {
+              "east": { "texture": "#alloy_forge_front", "uv": [ 9, 6, 10, 12 ] },
+              "south": { "texture": "#alloy_forge_front", "uv": [ 9, 6, 10, 12 ] },
+              "west": { "texture": "#alloy_forge_front", "uv": [ 9, 6, 10, 12 ] }
+          }
+      },
+      {
+          "from": [ 6, 4, 16 ], 
+          "to": [ 7, 10, 17 ], 
+          "faces": {
+              "east": { "texture": "#alloy_forge_front", "uv": [ 9, 6, 10, 12 ] },
+              "south": { "texture": "#alloy_forge_front", "uv": [ 9, 6, 10, 12 ] },
+              "west": { "texture": "#alloy_forge_front", "uv": [ 9, 6, 10, 12 ] }
+          }
+      }
+  ]
+}

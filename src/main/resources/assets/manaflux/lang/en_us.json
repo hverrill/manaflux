@@ -11,6 +11,8 @@
   "block.manaflux.composite_block": "Block of Composite",
   "block.manaflux.reactive_composite_block": "Block of Reactive Composite",
   "block.manaflux.transcendent_composite_block": "Block of Transcendent Composite",
+  "block.manaflux.alloy_forge": "Alloy Forge",
+  "block.manaflux.plating": "Machine Plating",
   "itemGroup.manaflux.general": "Manaflux"
 
 }
