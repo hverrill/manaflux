@@ -1,7 +1,7 @@
 package io.github.hverrill.manaflux.blocks;
 
+import io.github.hverrill.manaflux.blocks.entity.AbstractAlloyForgeBlockEntity;
 import net.minecraft.block.*;
-import net.minecraft.block.entity.AbstractFurnaceBlockEntity;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -20,11 +20,11 @@ import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 
 @SuppressWarnings("deprecation")
-public abstract class AbstractAlloyForge extends BlockWithEntity {
+public abstract class AbstractAlloyForgeBlock extends BlockWithEntity {
     public static final DirectionProperty FACING;
     public static final BooleanProperty LIT;
 
-    protected AbstractAlloyForge(Settings settings) {
+    protected AbstractAlloyForgeBlock(Settings settings) {
         super(settings);
         this.setDefaultState(this.stateManager.getDefaultState().with(FACING, Direction.NORTH).with(LIT, false));
     }
@@ -47,8 +47,8 @@ public abstract class AbstractAlloyForge extends BlockWithEntity {
     public void onPlaced(World world, BlockPos pos, BlockState state, LivingEntity placer, ItemStack itemStack) {
         if (itemStack.hasCustomName()) {
             BlockEntity blockEntity = world.getBlockEntity(pos);
-            if (blockEntity instanceof AbstractFurnaceBlockEntity) {
-                ((AbstractFurnaceBlockEntity)blockEntity).setCustomName(itemStack.getName());
+            if (blockEntity instanceof AbstractAlloyForgeBlockEntity) {
+                ((AbstractAlloyForgeBlockEntity)blockEntity).setCustomName(itemStack.getName());
             }
         }
 
@@ -57,9 +57,9 @@ public abstract class AbstractAlloyForge extends BlockWithEntity {
     public void onStateReplaced(BlockState state, World world, BlockPos pos, BlockState newState, boolean moved) {
         if (!state.isOf(newState.getBlock())) {
             BlockEntity blockEntity = world.getBlockEntity(pos);
-            if (blockEntity instanceof AbstractFurnaceBlockEntity) {
-                ItemScatterer.spawn(world, pos, (AbstractFurnaceBlockEntity)blockEntity);
-                ((AbstractFurnaceBlockEntity)blockEntity).method_27354(world, Vec3d.ofCenter(pos));
+            if (blockEntity instanceof AbstractAlloyForgeBlockEntity) {
+                ItemScatterer.spawn(world, pos, (AbstractAlloyForgeBlockEntity)blockEntity);
+                ((AbstractAlloyForgeBlockEntity)blockEntity).method_27354(world, Vec3d.ofCenter(pos));
                 world.updateComparators(pos, this);
             }
 

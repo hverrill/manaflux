@@ -1,6 +1,7 @@
 package io.github.hverrill.manaflux.blocks;
 
 import io.github.hverrill.manaflux.Manaflux;
+import io.github.hverrill.manaflux.blocks.entity.AlloyForgeBlockEntity;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
@@ -10,7 +11,6 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Material;
 import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.block.entity.FurnaceBlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.BlockItem;
 import net.minecraft.particle.ParticleTypes;
@@ -18,7 +18,6 @@ import net.minecraft.screen.NamedScreenHandlerFactory;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
-import net.minecraft.stat.Stats;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
@@ -51,20 +50,20 @@ public class AlloyForge{
         );
     }
 
-    public static class AlloyForgeBlock extends AbstractAlloyForge{
+    public static class AlloyForgeBlock extends AbstractAlloyForgeBlock {
         protected AlloyForgeBlock(AbstractBlock.Settings settings) {
             super(settings);
         }
 
         public BlockEntity createBlockEntity(BlockView world) {
-            return new FurnaceBlockEntity();
+            return new AlloyForgeBlockEntity();
         }
 
         protected void openScreen(World world, BlockPos pos, PlayerEntity player) {
             BlockEntity blockEntity = world.getBlockEntity(pos);
-            if (blockEntity instanceof FurnaceBlockEntity) {
+            if (blockEntity instanceof AlloyForgeBlockEntity) {
                 player.openHandledScreen((NamedScreenHandlerFactory)blockEntity);
-                player.incrementStat(Stats.INTERACT_WITH_FURNACE);
+                //player.incrementStat(Stats.INTERACT_WITH_FURNACE);
             }
 
         }
@@ -81,7 +80,7 @@ public class AlloyForge{
 
                 Direction direction = state.get(FACING);
                 Direction.Axis axis = direction.getAxis();
-                //double g = 0.52D;
+                double g = 0.52D;
                 double h = random.nextDouble() * 0.6D - 0.3D;
                 double i = axis == Direction.Axis.X ? (double)direction.getOffsetX() * 0.52D : h;
                 double j = random.nextDouble() * 6.0D / 16.0D;
