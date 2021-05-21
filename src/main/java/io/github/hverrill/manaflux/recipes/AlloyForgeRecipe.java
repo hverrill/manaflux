@@ -1,3 +1,5 @@
+package io.github.hverrill.manaflux.recipes;
+
 import net.java.games.input.Component.Identifier;
 import net.minecraft.inventory.CraftingInventory;
 import net.minecraft.item.ItemStack;
@@ -66,6 +68,12 @@ public class AlloyForgeRecipe implements Recipe<CraftingInventory> {
 
     @Override
     public RecipeType<?> getType() {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public net.minecraft.util.Identifier getId() {
         // TODO Auto-generated method stub
         return null;
     }
