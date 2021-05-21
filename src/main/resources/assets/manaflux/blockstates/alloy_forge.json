@@ -1,5 +1,8 @@
 {
   "variants": {
-    "": { "model": "manaflux:block/alloy_forge" }
+    "facing=north": { "model": "manaflux:block/alloy_forge" },
+    "facing=east": { "model": "manaflux:block/alloy_forge", "y": 90},
+    "facing=south": { "model": "manaflux:block/alloy_forge", "y": 180},
+    "facing=west": { "model": "manaflux:block/alloy_forge", "y": 270}
   }
 }
