@@ -10,35 +10,46 @@ import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventory;
 import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.ItemStack;
+import net.minecraft.network.PacketByteBuf;
 import net.minecraft.recipe.*;
 import net.minecraft.recipe.book.RecipeBookCategory;
-import net.minecraft.screen.AbstractRecipeScreenHandler;
-import net.minecraft.screen.ArrayPropertyDelegate;
-import net.minecraft.screen.PropertyDelegate;
-import net.minecraft.screen.ScreenHandlerType;
+import net.minecraft.screen.*;
 import net.minecraft.screen.slot.Slot;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.world.World;
 
 public class AlloyForgeScreenHandler extends AbstractRecipeScreenHandler<Inventory> {
     private final Inventory inventory;
-    private final PropertyDelegate propertyDelegate;
-    protected final World world;
-    private final RecipeType<? extends AbstractCookingRecipe> recipeType;
-    private final RecipeBookCategory category;
+    /*
+    private final PropertyDelegate propertyDelegate;*/
+    protected final World world;/*
+    private final RecipeType<? extends AbstractCookingRecipe> recipeType;*/
+    private final RecipeBookCategory category = RecipeBookCategory.FURNACE;
 
-    public AlloyForgeScreenHandler(ScreenHandlerType<?> type, RecipeType<? extends AbstractCookingRecipe> recipeType, RecipeBookCategory recipeBookCategory, int i, PlayerInventory playerInventory) {
+    public AlloyForgeScreenHandler(int syncId, PlayerInventory inventory) {
+        super(MFScreenHandler.ALLOY_FORGE, syncId);
+        this.inventory = inventory;
+        this.world = inventory.player.world;
+    }
+
+    public AlloyForgeScreenHandler(int syncId, PlayerInventory inventory, PacketByteBuf buf) {
+        super(MFScreenHandler.ALLOY_FORGE, syncId);
+        this.inventory = inventory;
+        this.world = inventory.player.world;
+    }
+
+    protected AlloyForgeScreenHandler(ScreenHandlerType<?> type, RecipeType<? extends AbstractCookingRecipe> recipeType, RecipeBookCategory recipeBookCategory, int i, PlayerInventory playerInventory) {
         this(type, recipeType, recipeBookCategory, i, playerInventory, new SimpleInventory(3), new ArrayPropertyDelegate(4));
     }
 
-    public AlloyForgeScreenHandler(ScreenHandlerType<?> type, RecipeType<? extends AbstractCookingRecipe> recipeType, RecipeBookCategory recipeBookCategory, int i, PlayerInventory playerInventory, Inventory inventory, PropertyDelegate propertyDelegate) {
+    protected AlloyForgeScreenHandler(ScreenHandlerType<?> type, RecipeType<? extends AbstractCookingRecipe> recipeType, RecipeBookCategory recipeBookCategory, int i, PlayerInventory playerInventory, Inventory inventory, PropertyDelegate propertyDelegate) {
         super(type, i);
-        this.recipeType = recipeType;
-        this.category = recipeBookCategory;
+        //this.recipeType = recipeType;
+        //this.category = recipeBookCategory;
         checkSize(inventory, 3);
         checkDataCount(propertyDelegate, 4);
         this.inventory = inventory;
-        this.propertyDelegate = propertyDelegate;
+        //this.propertyDelegate = propertyDelegate;
         this.world = playerInventory.player.world;
         this.addSlot(new Slot(inventory, 0, 56, 17));
         this.addSlot(new AlloyForgeFuelSlot(this, inventory, 1, 56, 53));
@@ -110,12 +121,12 @@ public class AlloyForgeScreenHandler extends AbstractRecipeScreenHandler<Invento
                 }
 
                 slot.onStackChanged(itemStack2, itemStack);
-            } else if (index != 1 && index != 0) {
+            } else if (index != 1 && index != 0) {/*
                 if (this.isSmeltable(itemStack2)) {
                     if (!this.insertItem(itemStack2, 0, 1, false)) {
                         return ItemStack.EMPTY;
                     }
-                } else if (this.isFuel(itemStack2)) {
+                } else*/ if (this.isFuel(itemStack2)) {
                     if (!this.insertItem(itemStack2, 1, 2, false)) {
                         return ItemStack.EMPTY;
                     }
@@ -145,15 +156,15 @@ public class AlloyForgeScreenHandler extends AbstractRecipeScreenHandler<Invento
 
         return itemStack;
     }
-
+/*
     protected boolean isSmeltable(ItemStack itemStack) {
         return this.world.getRecipeManager().getFirstMatch(this.recipeType, new SimpleInventory(itemStack), this.world).isPresent();
-    }
+    }*/
 
     public boolean isFuel(ItemStack itemStack) {
         return AlloyForgeBlockEntity.canUseAsFuel(itemStack);
     }
-
+/*
     @Environment(EnvType.CLIENT)
     public int getCookProgress() {
         int i = this.propertyDelegate.get(2);
@@ -175,7 +186,7 @@ public class AlloyForgeScreenHandler extends AbstractRecipeScreenHandler<Invento
     public boolean isBurning() {
         return this.propertyDelegate.get(0) > 0;
     }
-
+*/
     @Environment(EnvType.CLIENT)
     public RecipeBookCategory getCategory() {
         return this.category;
