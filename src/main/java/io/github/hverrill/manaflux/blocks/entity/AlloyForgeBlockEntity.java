@@ -1,9 +1,9 @@
 package io.github.hverrill.manaflux.blocks.entity;
 
+import io.github.hverrill.manaflux.screens.AlloyForgeScreenHandler;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.recipe.RecipeType;
-import net.minecraft.screen.FurnaceScreenHandler;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
@@ -18,6 +18,6 @@ public class AlloyForgeBlockEntity extends AbstractAlloyForgeBlockEntity{
     }
 
     protected ScreenHandler createScreenHandler(int syncId, PlayerInventory playerInventory) {
-        return new FurnaceScreenHandler(syncId, playerInventory, this, this.propertyDelegate);
+        return new AlloyForgeScreenHandler(syncId, playerInventory, this, this.propertyDelegate);
     }
 }
