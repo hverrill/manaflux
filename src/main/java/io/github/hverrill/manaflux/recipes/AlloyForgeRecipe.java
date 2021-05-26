@@ -29,7 +29,7 @@ public class AlloyForgeRecipe implements Recipe<CraftingInventory> {
  
 	public Ingredient getLeftIngot() { return this.leftIngot; }
 	public Ingredient getRightIngot() { return this.rightIngot; }
-    public Ingredient getComposite() { return this.rightIngot; }
+    public Ingredient getComposite() { return this.composite; }
  
 	@Override
 	public ItemStack getOutput() {
