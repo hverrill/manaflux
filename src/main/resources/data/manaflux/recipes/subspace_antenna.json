@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " E ",
+    "CRC",
+    " B "
+  ],
+  "key": {
+    "E": {
+      "item": "minecraft:eye_of_ender"
+    },
+    "R": {
+      "item": "minecraft:end_rod"
+    },
+    "C": {
+      "item": "manaflux:transcedent_composite"
+    },
+    "B": {
+      "item": "manaflux:high_bandwidth_circuit"
+    }
+  },
+  "result": {
+    "item": "manaflux:subspace_antenna",
+    "count": 1
+  }
+}
